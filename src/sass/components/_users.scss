@@ -1,0 +1,13 @@
+.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: 1fr
+  }
+}

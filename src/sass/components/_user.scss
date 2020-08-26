@@ -1,0 +1,99 @@
+.user {
+  &__hireable {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  &__card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px dotted var(--color-grey-light-4);
+    border-radius: 5px;
+    margin-top: 1rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: 1fr;
+    }
+
+    & > * {
+      padding: 2rem;
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      p {
+        font-size: 1.7rem;
+      }
+    }
+
+    &-right {
+      h3 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+
+      ul {
+        list-style: none;
+        font-size: 1.5rem;
+      }
+
+      li {
+        padding: .3rem 0;
+      }
+    }
+  }
+
+  &__repos {
+    display: flex;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border: 1px dotted var(--color-grey-light-4);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+    & > *:not(last-child) {
+      margin-right: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      & > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      justify-content: space-evenly;
+
+      & > *:not(last-child) {
+        margin-right: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column;
+      align-items: stretch;
+
+      & > *:not(last-child) {
+        margin-bottom: .6rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

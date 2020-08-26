@@ -1,0 +1,16 @@
+.search {
+  &__form {
+    margin: auto;
+
+    & > *:not(last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 2.2rem;
+    display: block;
+    padding: .3rem;
+  }
+}

@@ -1,0 +1,134 @@
+:root {
+  --color-primary: #eb2f64;
+  --color-primary-light: #ff3366;
+  --color-primary-dark: #ba265d;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #4d3843;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --color-white: #fff;
+}
+
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 50em; // 800px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  margin: auto;
+  padding: 2rem;
+  max-width: 1100px;
+}
+
+a:visited,
+a:link {
+  text-decoration: none;
+  color: var(--color-white);
+  transition: all .2s ease-in-out;
+}
+
+a:hover {
+  color: darken(#fff, 10%);
+}
+
+.text-success {
+  color: forestgreen;
+  font-size: 1.5rem;
+}
+
+.text-danger {
+  color: var(--color-primary-light);
+  font-size: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: .8rem;
+  text-align: center;
+  transition: all .2s ease-in-out;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+
+  &-dark {
+    color: var(--color-white);
+    background: var(--color-grey-dark-1);
+
+    &:hover {
+      background: lighten(#333, 10%);
+    }
+  }
+
+  &-light {
+    color: var(--color-grey-dark-2);
+    background: var(--color-grey-light-3);
+
+    &:hover {
+      background: darken(#f0eeee, 5%);
+    }
+  }
+
+  &-sm {
+    font-size: 1.3rem;
+    padding: .8rem 1.5rem;
+  }
+
+  &-block {
+    width: 100%;
+  }
+}
+
+.badge {
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  color: var(--color-white);
+
+  &-primary {
+    background-color: var(--color-primary);
+  }
+
+  &-success {
+    background-color: forestgreen;
+  }
+
+  &-light {
+    background-color: var(--color-grey-dark-2);
+  }
+
+  &-dark {
+    background-color: var(--color-grey-dark-1);
+  }
+}
