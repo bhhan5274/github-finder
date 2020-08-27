@@ -7,7 +7,7 @@ const User = ({user, repos}) => {
 
     return (
         <Fragment>
-            <Link to="/" className="btn btn-light" style={{color: '#777'}}>
+            <Link to="/github-finder" className="btn btn-light" style={{color: '#777'}}>
                 Back To Search
             </Link>
             <span className="user__hireable">Hireable </span>{'  '}
@@ -23,7 +23,7 @@ const User = ({user, repos}) => {
                         <h3>Bio</h3>
                         <p>{bio}</p>
                     </Fragment>}
-                    <a href={html_url} className="btn btn-dark" style={{margin: '1rem 0'}}>Visit Github Profile</a>
+                    <button onClick={() => window.open(`${html_url}`, "_blank")} className="btn btn-dark" style={{margin: '1rem 0'}}>Visit Github Profile</button>
                     <ul>
                         <li>
                             {login && <Fragment>

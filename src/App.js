@@ -17,9 +17,9 @@ function App({alert}) {
           <div className="container">
               <Alert alert={alert}/>
               <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/about" component={About} />
-                  <Route exact path="/user/:login" component={Detail} />
+                  <Route exact path="/github-finder" component={Home} />
+                  <Route exact path="/github-finder/about" component={About} />
+                  <Route exact path="/github-finder/user/:login" component={Detail} />
                   <Route component={NotFound} />
               </Switch>
           </div>

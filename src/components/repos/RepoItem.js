@@ -4,7 +4,7 @@ const RepoItem = ({repo}) => {
     return (
         <div className="repoItem">
             <h3>
-                <a href={repo.html_url}>{repo.name}</a>
+                <a onClick={() => window.open(`${repo.html_url}`, "_blank")} href="#">{repo.name}</a>
             </h3>
         </div>
     );
